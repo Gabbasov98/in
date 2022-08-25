@@ -1,0 +1,32 @@
+@import "../vars";
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-out .225s;
+    padding: 0;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-weight: 500;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.btn-black-outline{
+    color: $black;
+    border: 1px solid $black;
+    &:hover{
+        color: #fff;
+        background: #000;
+    }
+}
+
+.btn-black{
+    color: #FFFFFF;
+    background: $black;
+    &:hover{
+        color: $black;
+        background: $primary;
+    }
+}

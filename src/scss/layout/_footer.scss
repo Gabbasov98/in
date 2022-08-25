@@ -1,0 +1,111 @@
+.footer{
+  padding: 79px 0 107px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  &__inner,
+  &__bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo{
+    display: block;
+    width: 271px;
+    flex-shrink: 0;
+    margin-right: 30px;
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+  &__mob{
+    flex-grow: 1;
+    max-width: 935px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__btn{
+    width: 164px;
+    height: 49px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 13px;
+  }
+  &__contact{
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    &-icon{
+      margin-right: 18px;
+    }
+    &:hover{
+      path{
+        fill: $primary;
+      }
+    }
+  }
+  &__bottom{
+    margin-top: 54px;
+  }
+  &__protect{
+    width: 271px;
+    flex-shrink: 0;
+    margin-right: 30px;
+  }
+  &__protect,
+  &__conf{
+    font-size: 15px;
+    line-height: 200%;
+  }
+  &__right{
+    flex-grow: 1;
+    max-width: 935px;
+  }
+}
+
+@media screen and (max-width: 1100px){
+  .footer{
+    &__logo,
+    &__protect{
+      width: 220px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px){
+  .footer{
+    padding: 45px 0 60px;
+    &__inner,
+    &__bottom{
+      display: block;
+    }
+    &__mob,
+    &__right{
+      width: 100%;
+      max-width: 100%;
+      display: block;
+    }
+    &__contact{
+      margin-top: 20px;
+      &-icon{
+        width: 22px;
+        display: flex;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+    }
+    &__btn{
+      margin-top: 50px;
+    }
+    &__protect,
+    &__conf{
+      display: block;
+      margin-top: 15px;
+    }
+  }
+}

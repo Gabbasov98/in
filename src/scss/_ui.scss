@@ -1,0 +1,151 @@
+@import 'vars';
+@import 'components/_text.scss';
+@import 'components/_buttons.scss';
+@import 'components/_fonts.scss';
+.swiper{
+    &-button{
+        &-prev,
+        &-next{
+            &:hover{
+                path{
+                    fill: $primary;
+                }
+            }
+        }
+    }
+}
+
+.fg {
+    position: relative;
+    margin: 0;
+    svg{
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+    textarea,
+    input {
+        border: 1px solid #D8D8D8;
+        padding: 0 66px;
+        height: 72px;
+        width: 100%;
+        border-radius: 50px;
+        font-size: 15px;
+        letter-spacing: 0.02em;
+        background-color: transparent;
+        color: #000;
+        &::placeholder {
+            color: #000;
+        }
+        &:focus {
+            border-color: $black !important;
+        }
+    }
+    textarea{
+        height: 150px;
+        resize: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        &+svg{
+            top: 20px;
+            transform: unset;
+        }
+    }
+}
+
+.mcheck {
+    position: relative;
+    font-size: 15px;
+    input {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        cursor: pointer;
+        &:checked+label {
+            &::before {
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.97793 11.3569C4.85384 11.4817 4.68454 11.5513 4.50867 11.5513C4.3328 11.5513 4.16349 11.4817 4.0394 11.3569L0.291697 7.60856C-0.0972324 7.21963 -0.0972324 6.58896 0.291697 6.20076L0.760965 5.73137C1.15002 5.34244 1.77996 5.34244 2.16889 5.73137L4.50867 8.07127L10.8311 1.74873C11.2201 1.3598 11.8507 1.3598 12.239 1.74873L12.7083 2.21812C13.0972 2.60705 13.0972 3.2376 12.7083 3.62592L4.97793 11.3569Z' fill='black'/%3E%3C/svg%3E");
+            }
+        }
+    }
+    label {
+        padding-left: 54px;
+        position: relative;
+        min-height: 30px;
+        line-height: 137%;
+        cursor: pointer;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            border-radius: 5px;
+            border: 1px solid $black;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 13px auto;
+            width: 30px;
+            height: 30px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all .100s;
+        }
+    }
+    a{
+        color: #959595;
+        text-decoration: underline;
+    }
+}
+
+.file-input{
+    width: 165px;
+    height: 46px;
+    background: #EAEAEA;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 10px;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+    font-size: 15px;
+    position: relative;
+    input{
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+    svg{
+        margin-right: 10px;
+    }
+    span{
+        text-decoration-line: underline;
+        white-space: nowrap;
+    }
+}
+
+.file{
+    display: flex;
+    align-items: center;
+    margin-left: 22px;
+    font-size: 15px;
+    line-height: 173%;
+    letter-spacing: 0.02em;
+    svg{
+        margin-left: 19px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .mcheck{
+        font-size: 13px;
+    }
+}

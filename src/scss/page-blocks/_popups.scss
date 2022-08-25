@@ -1,0 +1,99 @@
+.modal-backdrop {
+    &.show {
+        opacity: 0.7;
+    }
+}
+
+.modal{
+    &-dialog{
+        pointer-events: unset;
+        width: 746px;
+        background: #FFFFFF;
+        max-width: calc(100% - 10px);
+        margin-left: auto;
+        margin-right: auto;
+        padding: 74px 85px 77px;
+    }
+    &__close{
+        position: absolute;
+        top: 29px;
+        right: 22px;
+        &:hover{
+            path{
+                fill: $black;
+            }
+        }
+    }
+    &__title{
+        text-align: center;
+        font-weight: 800;
+        font-size: 45px;
+        line-height: 142%;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
+    &__desc{
+        font-weight: 700;
+        margin-top: 18px;
+        text-align: center;
+    }
+    &__form{
+        margin-top: 38px;
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 20px;
+    }
+    &__check{
+        max-width: 415px;
+        margin: 4px auto 0;
+    }
+    &__btn{
+        margin: 19px auto 0;
+        width: 186px;
+        height: 77px;
+        border-radius: 55px;
+        font-size: 15px;
+        flex-shrink: 0;
+        svg{
+            margin-left: 20px;
+        }
+    }
+    &__files{
+        display: flex;
+        align-items: center;
+        margin-top: 14px;
+    }
+    &__bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 24px;
+        .modal{
+            &__btn{
+                margin: 0 0 0 40px;
+            }
+            &__check{
+                margin: 0;
+                max-width: 340px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .modal{
+        &-dialog{
+            padding: 45px 10px;
+        }
+        &__title{
+            font-size: 25px;
+        }
+        &__desc{
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        &__form{
+            margin-top: 25px;
+        }
+    }
+}
