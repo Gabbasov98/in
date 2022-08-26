@@ -95,5 +95,15 @@
         &__form{
             margin-top: 25px;
         }
+        &__bottom{
+            display: block;
+            .modal__check{
+                max-width: 415px;
+                margin: 4px auto 0;
+            }
+            .modal__btn{
+                margin: 19px auto 0;
+            }
+        }
     }
 }

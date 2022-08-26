@@ -2,6 +2,28 @@
 @import 'components/_text.scss';
 @import 'components/_buttons.scss';
 @import 'components/_fonts.scss';
+.animate-cards{
+    transform: translateY(60px);
+    transition: all 1.25s;
+    &--active{
+        transform: translateY(0);
+    }
+    //&--middle{
+    //    transition: all 1.75s;
+    //}
+    //&--last{
+    //    transition: all 2.25s;
+    //}
+}
+
+.animate-opacity{
+    opacity: 0;
+    transition: all 1.25s;
+    &--active{
+        opacity: 1;
+    }
+}
+
 .swiper{
     &-button{
         &-prev,

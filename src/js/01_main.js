@@ -46,4 +46,7 @@ $(".header__burger").click(function() {
 })
 
 
-
+$(".nav__link").click(function () {
+    $("body").removeClass("fixed-body")
+    $(".header").removeClass("header--active")
+})
